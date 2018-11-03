@@ -1,0 +1,38 @@
+﻿@model List<XPTO.Pessoa>
+
+@{
+    ViewBag.Title = "Pessoas";
+}
+
+<h2>Tabela de pessoas</h2>
+
+
+<table id="pessoas" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Booleano</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pessoa in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(m => pessoa.Nome)</td>
+            <td>@Html.DisplayFor(m => pessoa.SobreNome)</td>
+            <td>@Html.DisplayFor(m => pessoa.DataNascimento)</td>
+            <td>@Html.DisplayFor(m => pessoa.Sexo)</td>
+            <td>@Html.DisplayFor(m => pessoa.Email)</td>
+            <td>@Html.DisplayFor(m => pessoa.Booleano)</td>
+        </tr>            
+        }
+
+    </tbody>
+</table>
+
+
+
